@@ -1,0 +1,152 @@
+{
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context",
+        {
+            "GithubService": "https://w3id.org/ro/terms/test#GithubService",
+            "JenkinsService": "https://w3id.org/ro/terms/test#JenkinsService",
+            "PlanemoEngine": "https://w3id.org/ro/terms/test#PlanemoEngine",
+            "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
+            "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
+            "TestService": "https://w3id.org/ro/terms/test#TestService",
+            "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
+            "TravisService": "https://w3id.org/ro/terms/test#TravisService",
+            "definition": "https://w3id.org/ro/terms/test#definition",
+            "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
+            "instance": "https://w3id.org/ro/terms/test#instance",
+            "resource": "https://w3id.org/ro/terms/test#resource",
+            "runsOn": "https://w3id.org/ro/terms/test#runsOn"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2026-10-31T17:28:00.755953",
+            "hasPart": [
+                {
+                    "@id": "samestr-shared-strain-detection.ga"
+                },
+                {
+                    "@id": "README.md"
+                },
+                {
+                    "@id": "samestr-shared-strain-detection-tests.yml"
+                }
+            ],
+            "isBasedOn": "https://github.com/iwc-workflows/samestr-shared-strain-detection",
+            "license": "MIT",
+            "mainEntity": {
+                "@id": "samestr-shared-strain-detection.ga"
+            },
+            "mentions": [
+                {
+                    "@id": "#test_main_1"
+                }
+            ],
+            "name": "samestr-shared-strain-detection/main"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "samestr-shared-strain-detection.ga",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "creator": [
+                {
+                    "@id": "https://orcid.org/0009-0000-2380-8385"
+                }
+            ],
+            "name": "samestr-shared-strain-detection/main",
+            "programmingLanguage": {
+                "@id": "#galaxy"
+            },
+            "url": "https://github.com/iwc-workflows/samestr-shared-strain-detection",
+            "version": "0.1"
+        },
+        {
+            "@id": "#galaxy",
+            "@type": "ComputerLanguage",
+            "identifier": {
+                "@id": "https://galaxyproject.org/"
+            },
+            "name": "Galaxy",
+            "url": {
+                "@id": "https://galaxyproject.org/"
+            },
+            "version": "v19_09"
+        },
+        {
+            "@id": "https://orcid.org/0009-0000-2380-8385",
+            "@type": "Person",
+            "name": "Xenia Morera Mart\u00ednez"
+        },
+        {
+            "@id": "README.md",
+            "@type": "File"
+        },
+        {
+            "@id": "#test_main_1",
+            "@type": "TestSuite",
+            "definition": {
+                "@id": "samestr-shared-strain-detection-tests.yml"
+            },
+            "instance": [
+                {
+                    "@id": "#test_main_1_1"
+                }
+            ],
+            "mainEntity": {
+                "@id": "samestr-shared-strain-detection.ga"
+            },
+            "name": "test_main_1"
+        },
+        {
+            "@id": "#test_main_1_1",
+            "@type": "TestInstance",
+            "name": "test_main_1_1",
+            "resource": "repos/iwc-workflows/samestr-shared-strain-detection/actions/workflows/wftest.yml",
+            "runsOn": {
+                "@id": "https://w3id.org/ro/terms/test#GithubService"
+            },
+            "url": "https://api.github.com"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/test#GithubService",
+            "@type": "TestService",
+            "name": "Github Actions",
+            "url": {
+                "@id": "https://github.com"
+            }
+        },
+        {
+            "@id": "samestr-shared-strain-detection-tests.yml",
+            "@type": [
+                "File",
+                "TestDefinition"
+            ],
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/terms/test#PlanemoEngine"
+            },
+            "engineVersion": ">=0.75.47"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/test#PlanemoEngine",
+            "@type": "SoftwareApplication",
+            "name": "Planemo",
+            "url": {
+                "@id": "https://github.com/galaxyproject/planemo"
+            }
+        }
+    ]
+}
